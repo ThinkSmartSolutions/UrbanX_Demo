@@ -1340,6 +1340,47 @@
   .scene.active .use-card:nth-child(2){opacity:1;transform:translateY(0);transition-delay:.25s}
   .scene.active .use-card:nth-child(3){opacity:1;transform:translateY(0);transition-delay:.4s}
 
+
+  /* ===== USE CASES RESPONSIVE ===== */
+  @media (max-width:920px){
+    [style*="--uc-grid"]{
+      grid-template-columns:1fr !important;
+      gap:12px !important;
+    }
+    .use-card{
+      padding:18px !important;
+      flex-direction:row !important;
+      gap:14px !important;
+      align-items:flex-start !important;
+    }
+    .use-card > div:first-child{
+      flex-shrink:0 !important;
+    }
+    .use-card > div:first-child > div{
+      width:38px !important;
+      height:38px !important;
+    }
+  }
+  @media (max-width:680px){
+    [style*="--uc-grid"]{
+      grid-template-columns:1fr !important;
+      gap:10px !important;
+      margin-top:12px !important;
+    }
+    .use-card{
+      padding:14px 16px !important;
+      flex-direction:column !important;
+      gap:10px !important;
+    }
+    .use-card .use-item span:last-child{
+      font-size:12px !important;
+    }
+    /* Nascunde bullet 3 e 4 pe mobile ca sa incapa */
+    .use-card .use-item:nth-child(n+4){
+      display:none !important;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -1494,6 +1535,107 @@
     </div>
   </div>
 </section>
+
+<!-- ===== SCENE USE CASES / PENTRU CINE ===== -->
+<section class="scene" data-duration="9000" data-chapter="24 · Pentru cine · Use cases">
+  <div class="scene-inner">
+    <div class="scene-eyebrow">PENTRU CINE · CAZURI DE UTILIZARE</div>
+    <h2><em>Trei roluri</em>, un singur instrument.</h2>
+    <p class="scene-lede">Arhitecți, investitori, primării — fiecare cu nevoile lui.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px;max-width:1200px;width:100%;--uc-grid:1">
+
+      <!-- Card 1: ARHITECT -->
+      <div class="use-card" style="padding:28px;background:var(--panel);border:1.5px solid rgba(232,179,65,0.35);border-radius:14px;display:flex;flex-direction:column;gap:14px">
+        <div style="width:48px;height:48px;border-radius:12px;background:rgba(232,179,65,0.12);border:1.5px solid rgba(232,179,65,0.3);display:flex;align-items:center;justify-content:center">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8b341" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V12L12 3l9 9v10"/><path d="M9 22v-6h6v6"/><rect x="10" y="3" width="4" height="4"/></svg>
+        </div>
+        <div>
+          <div style="font-family:var(--mono);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px">Arhitect · Urbanist</div>
+          <div style="font-family:var(--display);font-size:20px;font-weight:600;color:var(--text);line-height:1.1">Birou de proiectare</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
+            <span style="width:5px;height:5px;background:var(--gold);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
+            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Pre-studiu volumetric rapid</span>
+          </div>
+          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
+            <span style="width:5px;height:5px;background:var(--gold);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
+            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Verificare conformitate PUG · CU</span>
+          </div>
+          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
+            <span style="width:5px;height:5px;background:var(--gold);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
+            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Vizualizare 3D pentru client</span>
+          </div>
+          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
+            <span style="width:5px;height:5px;background:var(--gold);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
+            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Calcule însorire OMS 119/2014</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: INVESTITOR -->
+      <div class="use-card" style="padding:28px;background:var(--panel);border:1.5px solid rgba(74,158,255,0.35);border-radius:14px;display:flex;flex-direction:column;gap:14px">
+        <div style="width:48px;height:48px;border-radius:12px;background:rgba(74,158,255,0.12);border:1.5px solid rgba(74,158,255,0.3);display:flex;align-items:center;justify-content:center">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a9eff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div>
+          <div style="font-family:var(--mono);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);margin-bottom:6px">Dezvoltator · Investitor</div>
+          <div style="font-family:var(--display);font-size:20px;font-weight:600;color:var(--text);line-height:1.1">Achiziție și valorificare teren</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
+            <span style="width:5px;height:5px;background:var(--blue);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
+            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Potențial parcelă înainte de cumpărare</span>
+          </div>
+          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
+            <span style="width:5px;height:5px;background:var(--blue);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
+            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Estimare SC max · SD max · nr. unități</span>
+          </div>
+          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
+            <span style="width:5px;height:5px;background:var(--blue);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
+            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Scenarii: rezidențial / office / mixt</span>
+          </div>
+          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
+            <span style="width:5px;height:5px;background:var(--blue);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
+            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Argumentare bancă / asociați (raport+3D)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: PRIMĂRIE -->
+      <div class="use-card" style="padding:28px;background:var(--panel);border:1.5px solid rgba(125,211,192,0.35);border-radius:14px;display:flex;flex-direction:column;gap:14px">
+        <div style="width:48px;height:48px;border-radius:12px;background:rgba(125,211,192,0.12);border:1.5px solid rgba(125,211,192,0.3);display:flex;align-items:center;justify-content:center">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7dd3c0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M9 21v-8h6v8"/><line x1="12" y1="3" x2="12" y2="7"/></svg>
+        </div>
+        <div>
+          <div style="font-family:var(--mono);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--teal);margin-bottom:6px">Primărie · DAU</div>
+          <div style="font-family:var(--display);font-size:20px;font-weight:600;color:var(--text);line-height:1.1">Verificare propuneri</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
+            <span style="width:5px;height:5px;background:var(--teal);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
+            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Pre-screening cereri CU</span>
+          </div>
+          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
+            <span style="width:5px;height:5px;background:var(--teal);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
+            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Validare conformitate PUG</span>
+          </div>
+          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
+            <span style="width:5px;height:5px;background:var(--teal);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
+            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Impact urban: H propus vs context</span>
+          </div>
+          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
+            <span style="width:5px;height:5px;background:var(--teal);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
+            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Identificare cazuri PUZ</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
 <!-- ===== SCENE 3 · MULTISELECT (FEATURE NOU) ===== -->
 <section class="scene" data-duration="9000" data-chapter="02 · Multiselect parcele">
@@ -2005,106 +2147,6 @@
       <div style="margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:1.2px;color:var(--text-muted);text-align:center">
         ↳ Indicatori PUG · Calcule suprafețe · Parametri propus vs PUG · Vederi 3D · Concluzii · Etape următoare
       </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ===== SCENE USE CASES / PENTRU CINE ===== -->
-<section class="scene" data-duration="9000" data-chapter="24 · Pentru cine · Use cases">
-  <div class="scene-inner">
-    <div class="scene-eyebrow">PENTRU CINE · CAZURI DE UTILIZARE</div>
-    <h2><em>Trei roluri</em>, un singur instrument.</h2>
-    <p class="scene-lede">UrbanX acoperă nevoile diferite ale profesioniștilor implicați în procesul de autorizare urbanistică.</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px;max-width:1200px;width:100%">
-
-      <!-- Card 1: ARHITECT -->
-      <div class="use-card" style="padding:28px;background:var(--panel);border:1.5px solid rgba(232,179,65,0.35);border-radius:14px;display:flex;flex-direction:column;gap:14px">
-        <div style="width:48px;height:48px;border-radius:12px;background:rgba(232,179,65,0.12);border:1.5px solid rgba(232,179,65,0.3);display:flex;align-items:center;justify-content:center">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8b341" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V12L12 3l9 9v10"/><path d="M9 22v-6h6v6"/><rect x="10" y="3" width="4" height="4"/></svg>
-        </div>
-        <div>
-          <div style="font-family:var(--mono);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px">Arhitect · Urbanist</div>
-          <div style="font-family:var(--display);font-size:20px;font-weight:600;color:var(--text);line-height:1.1">Birou de proiectare</div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:8px">
-          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
-            <span style="width:5px;height:5px;background:var(--gold);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
-            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Pre-studiu volumetric înainte de Anteproiect</span>
-          </div>
-          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
-            <span style="width:5px;height:5px;background:var(--gold);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
-            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Verificare conformitate PUG pentru Certificat de Urbanism</span>
-          </div>
-          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
-            <span style="width:5px;height:5px;background:var(--gold);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
-            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Vizualizare 3D rapidă pentru prezentare client</span>
-          </div>
-          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
-            <span style="width:5px;height:5px;background:var(--gold);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
-            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Calcule preliminare însorire (OMS 119/2014)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2: INVESTITOR -->
-      <div class="use-card" style="padding:28px;background:var(--panel);border:1.5px solid rgba(74,158,255,0.35);border-radius:14px;display:flex;flex-direction:column;gap:14px">
-        <div style="width:48px;height:48px;border-radius:12px;background:rgba(74,158,255,0.12);border:1.5px solid rgba(74,158,255,0.3);display:flex;align-items:center;justify-content:center">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a9eff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        </div>
-        <div>
-          <div style="font-family:var(--mono);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);margin-bottom:6px">Dezvoltator · Investitor</div>
-          <div style="font-family:var(--display);font-size:20px;font-weight:600;color:var(--text);line-height:1.1">Achiziție și valorificare teren</div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:8px">
-          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
-            <span style="width:5px;height:5px;background:var(--blue);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
-            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Evaluare rapidă potențial parcelă înainte de cumpărare</span>
-          </div>
-          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
-            <span style="width:5px;height:5px;background:var(--blue);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
-            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Estimare SC max / SD max / număr unități</span>
-          </div>
-          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
-            <span style="width:5px;height:5px;background:var(--blue);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
-            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Comparare scenarii (rezidențial vs office vs mixt)</span>
-          </div>
-          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
-            <span style="width:5px;height:5px;background:var(--blue);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
-            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Argumentare pentru bancă / asociați (raport + 3D)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3: PRIMĂRIE -->
-      <div class="use-card" style="padding:28px;background:var(--panel);border:1.5px solid rgba(125,211,192,0.35);border-radius:14px;display:flex;flex-direction:column;gap:14px">
-        <div style="width:48px;height:48px;border-radius:12px;background:rgba(125,211,192,0.12);border:1.5px solid rgba(125,211,192,0.3);display:flex;align-items:center;justify-content:center">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7dd3c0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M9 21v-8h6v8"/><line x1="12" y1="3" x2="12" y2="7"/></svg>
-        </div>
-        <div>
-          <div style="font-family:var(--mono);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--teal);margin-bottom:6px">Primărie · DAU</div>
-          <div style="font-family:var(--display);font-size:20px;font-weight:600;color:var(--text);line-height:1.1">Verificare propuneri</div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:8px">
-          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
-            <span style="width:5px;height:5px;background:var(--teal);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
-            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Pre-screening cereri Certificat de Urbanism</span>
-          </div>
-          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
-            <span style="width:5px;height:5px;background:var(--teal);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
-            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Validare conformitate PUG pe parametri esențiali</span>
-          </div>
-          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
-            <span style="width:5px;height:5px;background:var(--teal);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
-            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Analiză rapidă impact urban (H propus vs context)</span>
-          </div>
-          <div class="use-item" style="display:flex;gap:10px;align-items:flex-start">
-            <span style="width:5px;height:5px;background:var(--teal);border-radius:50%;margin-top:7px;flex-shrink:0"></span>
-            <span style="font-size:13px;color:var(--text-dim);line-height:1.5">Identificare cazuri ce necesită PUZ</span>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
